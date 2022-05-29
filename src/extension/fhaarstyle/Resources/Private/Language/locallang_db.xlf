@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-02-07T00:02:05Z" product-name="bootstrap_grids">
+        <header/>
+        <body>
+			<trans-unit id="textimageleft" xml:space="preserve">
+				<source>Text mit Bild Links</source>
+			</trans-unit>
+			<trans-unit id="textimageleft.description" xml:space="preserve">
+				<source>Weiße Box mit Text rechts und Bild vollflächig links</source>
+			</trans-unit>
+			<trans-unit id="textimageright" xml:space="preserve">
+				<source>Text mit Bild Rechts</source>
+			</trans-unit>
+			<trans-unit id="textimageright.description" xml:space="preserve">
+				<source>Weiße Box mit Text links und Bild vollflächig rechts</source>
+			</trans-unit>
+
+        </body>
+    </file>
+</xliff>

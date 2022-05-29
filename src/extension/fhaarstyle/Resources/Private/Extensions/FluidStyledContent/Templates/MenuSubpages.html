@@ -1,0 +1,55 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+    <f:layout name="Default" />
+    <f:section name="Main">
+
+        <f:if condition="{menu}">
+            <div class="d-flex justify-content-end">
+                <f:for as="page" each="{menu}">
+                    <a href="{page.link}" {f:if(condition:page.target,then:'target="{page.target}"')}
+                        class="ms-3"
+                        title="{page.title}">
+                        <i class="fa fa-2x {page.data.fa_icon_name}"></i>
+                    </a>
+                </f:for>
+            </div>
+            <f:comment>
+                <div class="row">
+                    <f:for as="page" each="{menu}">
+                        <div class="col-12 col-md-4 p-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="mb-3">
+                                        <a href="{page.link}" {f:if(condition:page.target,then:'target="{page.target}"')}
+                                        title="{page.title}">
+                                        {page.title}
+                                        </a>
+                                    </h2>
+                                    <f:if condition="{page.files}">
+                                        <div class="d-block w-100 text-center">
+                                            <a href="{page.link}" {f:if(condition:page.target,then:'target="{page.target}"')}
+                                            title="{page.title}">
+                                            <f:render arguments="{file:page.files.0,dimensions:{width:'306m'}}"
+                                                    partial="Media/Rendering/Image" />
+                                            </a>
+                                        </div>
+                                    </f:if>
+                                    <f:if condition="{page.data.abstract}">
+                                        <p class="card-text my-3">
+                                            <f:format.nl2br>{page.data.abstract}</f:format.nl2br>
+                                        </p>
+                                    </f:if>
+                                    <a href="{page.link}" {f:if(condition:page.target,then:'target="{page.target}"')}
+                                    class="btn btn-primary w-100"
+                                    title="{page.title}">
+                                    Mehr Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </f:comment>
+        </f:if>
+
+    </f:section>
+</html>

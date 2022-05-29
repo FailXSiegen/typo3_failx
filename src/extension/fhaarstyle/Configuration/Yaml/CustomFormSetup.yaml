@@ -1,0 +1,20 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          20: EXT:fhaarstyle/Resources/Private/Extensions/Form/Yaml/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  100: 'EXT:fhaarstyle/Resources/Private/Extensions/Form/Frontend/Templates/'
+                partialRootPaths:
+                  100: 'EXT:fhaarstyle/Resources/Private/Extensions/Form/Frontend/Partials/'
+                layoutRootPaths:
+                  100: 'EXT:fhaarstyle/Resources/Private/Extensions/Form/Frontend/Layouts/'

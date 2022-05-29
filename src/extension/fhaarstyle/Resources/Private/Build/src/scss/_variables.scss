@@ -1,0 +1,48 @@
+$white: #fff;
+$grey: #D1D1D6;
+$darkgrey: #767676;
+$neongreen: #00f700;
+$themeColours: (
+  "white": $white,
+  "grey": $grey,
+  "neongreen": $neongreen,
+  "darkgrey": $darkgrey
+);
+$primary: $neongreen;
+$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 7.5,
+  9: $spacer * 9,
+  10: $spacer * 10.5,
+  11: $spacer * 12,
+  12: $spacer * 13.5,
+  13: $spacer * 15,
+  14: $spacer * 16.5,
+  15: $spacer * 18
+);
+
+$accordion-color: inherit;
+$accordion-bg: inherit;
+$accordion-button-active-bg: inherit;
+$accordion-button-active-color: inherit;
+$accordion-button-focus-border-color: none;
+$accordion-button-focus-box-shadow: none;
+
+$box-shadow: 14px 7px 10px #0000006B;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 2.2rem;
+$h3-font-size: 2rem;
+$headings-font-weight: 700;
+$headings-font-style: italic;
+$headings-font-family: 'Lobster Two', Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

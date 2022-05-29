@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{gallery.rows}">
+	<f:if condition="{gallery.rows.1.columns.1.media.extension} == 'youtube'">
+		<f:then>
+			<f:for each="{gallery.rows}" as="row">
+				<f:for each="{row.columns}" as="column">
+					<f:if condition="{column.media}">
+						<f:render partial="Media/Type"
+							arguments="{file: column.media, dimensions: column.dimensions, data: data, settings: settings}" />
+					</f:if>
+				</f:for>
+			</f:for>
+		</f:then>
+		<f:else>
+			<div class="gallery d-flex flex-column align-content-{gallery.position.horizontal}{f:if(condition: data.imageborder, then: ' border')}"
+				data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
+				<f:for each="{gallery.rows}" as="row">
+					<div class="row">
+						<f:variable name="colCount" value="{row.columns -> f:count()}" />
+						<f:variable name="colClass"
+							value="{f:if(condition: '{colCount} > 4',then:'col-6', else:'col-12')}" />
+						<f:variable name="colSmClass"
+							value="{f:if(condition: '{colCount} > 4',then:'col-sm-4', else:'col-sm-6')}" />
+						<f:variable name="colMdClass"
+							value="{f:if(condition: '{colCount} > 4',then:'col-md-4', else:'col-md-{12 / colCount}')}" />
+						<f:variable name="colLgClass"
+							value="{f:if(condition: '{colCount} > 6',then:'col-lg', else:'col-lg-{12 / colCount}')}" />
+						<f:for each="{row.columns}" as="column">
+							<f:if condition="{column.media}">
+								<div
+									class="{colClass} {colSmClass} {colMdClass} {colLgClass} text-{gallery.position.horizontal}">
+									<f:render partial="Media/Type"
+										arguments="{file: column.media, dimensions: column.dimensions, data: data, settings: settings}" />
+								</div>
+							</f:if>
+						</f:for>
+					</div>
+				</f:for>
+			</div>
+		</f:else>
+	</f:if>
+
+</f:if>
+
+</html>

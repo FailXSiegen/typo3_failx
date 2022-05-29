@@ -1,0 +1,186 @@
+@import 'variables';
+@import './../../../../Public/Vendor/bootstrap/scss/functions';
+@import './../../../../Public/Vendor/bootstrap/scss/variables';
+@import './../../../../Public/Vendor/bootstrap/scss/mixins';
+@import './../../../../Public/Vendor/bootstrap/scss/tables';
+
+
+@each $themeColour,
+$i in $themeColours {
+    .bg- {
+        &#{$themeColour} {
+            background-color: $i;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    body.default {
+        padding: 0;
+
+        >header {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+
+        >main {
+            overflow: hidden;
+
+            >div {
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+    }
+
+    .font-light {
+        font-weight: 300;
+    }
+
+    .grayscale {
+        filter: grayscale(1);
+
+        img {
+            filter: grayscale(1);
+        }
+
+        &:focus,
+        &:hover {
+            filter: grayscale(0);
+
+            img {
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    font-size: 1.3rem;
+
+}
+
+.dropdown-item {
+    white-space: nowrap;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        background: none;
+    }
+}
+
+.hassub {
+    white-space: nowrap;
+}
+
+#head {
+    background-color: white;
+}
+
+@include media-breakpoint-down(xl) {
+    .dropdown-item {
+        white-space: normal !important;
+        padding: 0.25rem 0;
+    }
+
+    .dropdown-menu {
+        background: none !important;
+
+        &[data-bs-popper] {
+            margin-top: 0;
+        }
+
+        border: 0 !important;
+    }
+
+    .ce-gallery {
+        .col {
+            margin-bottom: 25px;
+        }
+    }
+
+    main {
+
+        >.container,
+        >.container-fluid {
+
+            +.container-fluid,
+            +.container {
+                margin-top: 30px;
+            }
+        }
+    }
+
+}
+
+@include media-breakpoint-up(xl) {
+    #head {
+        min-height: 165px;
+    }
+
+    .dropdown-menu {
+        &[data-bs-popper] {
+            left: 8px;
+            margin-top: 0.95rem;
+        }
+    }
+}
+
+.flex-fill-first-child>*:first-child {
+    flex: 1 1 auto !important;
+}
+
+.flex-fill-last-child>*:last-child {
+    flex: 1 1 auto !important;
+}
+
+main {
+    position: relative;
+
+    .ce-image {
+        overflow: initial;
+    }
+}
+
+footer {
+    p {
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+.bg-white {
+    color: $darkgrey;
+
+    h2,
+    .h2,
+    h3,
+    .h3 {
+        color: $blue;
+    }
+}
+
+
+.table {
+    tr>td:first-child {
+        width: 350px;
+    }
+}

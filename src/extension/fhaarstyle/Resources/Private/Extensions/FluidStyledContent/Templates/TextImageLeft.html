@@ -1,0 +1,32 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+    <f:layout name="Default" />
+    <f:section name="Header">
+    </f:section>
+    <f:section name="Main">
+        <div class="bg-white p-0 mb-4">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-lg-1 order-2 pe-lg-0">
+                    <f:if condition="{image}">
+                        <f:render 
+                            partial="Media/Rendering/Image" 
+                            arguments="{
+                                file: image.0,
+                                pwidth: '585m',
+                                pcssClass: 'img w-100 object-cover'
+                            }" />
+                    </f:if>
+                </div>
+                <div class="col-12 col-lg-6 order-lg-2 order-1">
+                    <div class="p-5">
+                        <f:render partial="Header/All" arguments="{_all}" />
+                        <f:if condition="{data.bodytext}">
+                            <f:format.html>{data.bodytext}</f:format.html>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </f:section>
+   
+</html>

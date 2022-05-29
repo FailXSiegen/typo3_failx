@@ -1,0 +1,10 @@
+tt_content.gridelements_pi1 {
+    partialRootPaths {
+        20 = EXT:fhaarstyle/Resources/Private/Extensions/GridElements/
+        50 = EXT:fhaarstyle/Resources/Private/Extensions/FluidStyledContent/Partials/
+    }
+    templateRootPaths {
+        20 = EXT:fhaarstyle/Resources/Private/Extensions/GridElements/
+    }
+}
+

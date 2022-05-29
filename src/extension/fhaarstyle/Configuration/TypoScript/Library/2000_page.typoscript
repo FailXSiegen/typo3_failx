@@ -1,0 +1,115 @@
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = fileadmin/favicon.ico
+    10 = FLUIDTEMPLATE
+    10 {
+        variables {
+            rootPageUid = TEXT
+            rootPageUid.value = {$plugin.tx_fxtemplateshhhuerth.settings.rootPageUid}
+            logoPath = TEXT
+            logoPath.value = {$plugin.tx_fxtemplateshhhuerth.settings.logoPath}
+        }
+        templateName = TEXT
+        templateName.stdWrap {
+            cObject = TEXT
+            cObject {
+                data = levelfield:-2,backend_layout_next_level,slide
+                override.field = backend_layout
+                split {
+                    token = pagets__
+                    1.current = 1
+                    1.wrap = |
+                }
+            }
+            ifEmpty = Default
+        }
+
+        templateRootPaths {
+            0 = EXT:fhaarstyle/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = EXT:fhaarstyle/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = EXT:fhaarstyle/Resources/Private/Layouts/
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                special = directory
+                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.headerNavPageUid}
+                levels = 1
+                includeSpacer = 1
+                as = topNavigation
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                special = directory
+                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.mainNavPageUid}
+                levels = 3
+                includeSpacer = 1
+                as = mainNavigation
+                expandAll = 1
+            }
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = directory
+                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.footerNavPageUid}
+                levels = 1
+                includeSpacer = 1
+                as = footerNavigation
+            }
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+                special = directory
+                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.ctaNavPageUid}
+                levels = 1
+                as = ctaNavigation
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+            }
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            50 {
+                special = rootline
+                special.range = 0|-1
+                titleField = nav_title // title
+                as = breadcrumbNavigation
+            }
+        }
+    }
+    includeCSS {
+        abovethefold = EXT:fhaarstyle/Resources/Public/StyleSheet/abovethefold.css
+        abovethefold.inline {
+            inline = 1
+            forceOnTop = 1
+            media = all
+        }
+        fonts = EXT:fhaarstyle/Resources/Public/StyleSheet/fonts.css
+        fontawesome = EXT:fhaarstyle/Resources/Public/StyleSheet/font-awesome.css
+        custom = EXT:fhaarstyle/Resources/Public/StyleSheet/main.css
+    }
+    includeJSFooterlibs {
+        #jquery = EXT:fhaarstyle/Resources/Public/Vendor/jquery/dist/jquery.min.js
+        bootstrap = EXT:fhaarstyle/Resources/Public/JavaScript/bootstrap.bundle.min.js
+        #owlcarousel = EXT:fhaarstyle/Resources/Public/Vendor/owl.carousel/dist/owl.carousel.min.js
+        #fancybox = EXT:fhaarstyle/Resources/Public/Vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js
+    }
+    includeJSFooter {
+        custom = EXT:fhaarstyle/Resources/Public/JavaScript/javascript.js
+    }
+    meta {
+        viewport = width=device-width, initial-scale=1.0
+    }
+    headerData.1 = TEXT
+    headerData.1.value(
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3f07e175-861f-4e8e-906a-220fa79dd2e3" data-blockingmode="auto" type="text/javascript"></script>
+    )
+
+
+
+}

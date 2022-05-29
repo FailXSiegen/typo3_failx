@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+    
+      <div class="p-3 bg-white h-100 project">
+          <f:if condition="{project.gallerytype}">
+              <f:then>
+                <a 
+                    href="{f:uri.image(image:'{project.imageBefore.0}')}"
+                    data-gallery="gallery{project.uid}"
+                    data-glightbox="title: {project.title}; description: {project.rowDescription -> f:format.nl2br()}"
+                    class="glightbox h-100 d-flex justify-content-between">
+                        <f:render 
+                            partial="Media/Rendering/Image" 
+                            arguments="{
+                                file: project.imageBefore.0,
+                                pwidth: '400c',
+                                pheight: '400c',
+                                pcssClass: 'img img-fluid'
+                            }" />
+                        <f:render 
+                            partial="Media/Rendering/Image" 
+                            arguments="{
+                                file: project.imageAfter.0,
+                                pwidth: '400c',
+                                pheight: '400c'
+                            }" />
+                </a>
+              </f:then>
+              <f:else>
+                <a 
+                href="{f:uri.image(image:'{project.imageBefore.0}')}"
+                data-gallery="gallery{project.uid}"
+                data-glightbox="title: {project.title}; description: {project.rowDescription -> f:format.nl2br()}"
+                class="glightbox h-100">
+                <f:render 
+                    partial="Media/Rendering/Image" 
+                    arguments="{
+                        file: project.imageBefore.0,
+                        pwidth: '400c',
+                        pheight: '400c',
+                        pcssClass: 'img w-100 object-cover'
+                    }" />
+            </a>
+              </f:else>
+          </f:if>
+     
+        <div class="gallery-items d-none">
+            <f:if condition="{project.imageAfter.0}">
+                <a 
+                href="{f:uri.image(image:'{project.imageAfter.0}')}"
+                data-gallery="gallery{project.uid}"
+                data-glightbox="title: {project.title}; description: {project.rowDescription -> f:format.nl2br()}"
+                class="glightbox">
+                    <f:render 
+                        partial="Media/Rendering/Image" 
+                        arguments="{
+                            file: project.imageAfter.0,
+                            pwidth: '400c',
+                            pheight: '400c'
+                        }" />
+                </a>
+            </f:if>
+            <f:for each="{project.gallery}" as="galleryImage">
+                <a 
+                href="{f:uri.image(image:'{galleryImage}')}"
+                data-gallery="gallery{project.uid}"
+                data-glightbox="title: {project.title}; description: {project.rowDescription -> f:format.nl2br()}"
+                class="glightbox">
+                <f:render 
+                    partial="Media/Rendering/Image" 
+                    arguments="{file: galleryImage}" />
+            </a>
+            </f:for>
+        </div>
+      </div>
+</html>

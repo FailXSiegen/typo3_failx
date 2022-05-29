@@ -1,0 +1,89 @@
+<html 
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+        xmlns:v="http://typo3.org/ns/FluidTypo3/Vhs/ViewHelpers"
+        data-namespace-typo3-fluid="true">
+    <f:comment>
+        <f:media class="image-embed-item img img-fluid" file="{file}" width="{dimensions.width}"
+                 height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" />
+    </f:comment>
+    <f:variable name="shadow" value="{file.properties.shadow}" />
+    <f:if condition="{file.originalResource.properties.shadow}">
+        <f:variable name="shadow" value="{file.originalResource.properties.shadow}" />
+    </f:if>
+    <f:variable name="width" value="{f:if(condition: pwidth, then:'{pwidth}', else:'{dimensions.width}')}" />
+    <f:variable name="height" value="{f:if(condition: pheight, then:'{pheight}', else:'{dimensions.height}')}" />
+    <f:variable name="xswidth" value="{f:if(condition: pxswidth, then:'{pxswidth}', else:'767m')}" />
+    <f:variable name="xsheight" value="{f:if(condition: pxsheight, then:'{pxsheight}', else:'')}" />
+    <f:variable name="smwidth" value="{f:if(condition: psmwidth, then:'{psmwidth}', else:'991m')}" />
+    <f:variable name="smheight" value="{f:if(condition: psmheight, then:'{psmheight}', else:'')}" />
+    <f:variable name="mdwidth" value="{f:if(condition: pmdwidth, then:'{pmdwidth}', else:'1200m')}" />
+    <f:variable name="mdheight" value="{f:if(condition: pmdheight, then:'{pmdheight}', else:'')}" />
+    <f:variable name="cssClass" value="{f:if(condition: pcssClass, then:'{pcssClass}', else:'img img-fluid')}" />
+
+    <picture>
+        <v:media.exists file="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: xswidth, height: xsheight, cropVariant:'smartphone-portrait') -> v:format.substring(start:'1')}.webp">
+        <source media="(max-width: 767px) and (orientation:portrait)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: xswidth, height: xsheight, cropVariant:'smartphone-portrait')}.webp"
+                type="image/webp"
+                >
+        </v:media.exists>
+        <source media="(max-width: 767px) and (orientation:portrait)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: xswidth, height: xsheight, cropVariant:'smartphone-portrait')}">
+
+        <v:media.exists file="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: xswidth, height: xsheight, cropVariant:'smartphone-landscape') -> v:format.substring(start:'1')}.webp">
+        <source media="(max-width: 767px) and (orientation:landscape)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: xswidth, height: xsheight, cropVariant:'smartphone-landscape')}.webp"
+                type="image/webp"
+                >
+        </v:media.exists>
+        <source media="(max-width: 767px) and (orientation:landscape)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: xswidth, height: xsheight, cropVariant:'smartphone-landscape')}">
+
+        <v:media.exists file="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: smwidth, height: smheight, cropVariant:'tablet-portrait') -> v:format.substring(start:'1')}.webp">
+        <source media="(max-width: 991px) and (orientation:portrait)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: smwidth, height: smheight, cropVariant:'tablet-portrait')}.webp"
+                type="image/webp"
+                >
+        </v:media.exists>
+        <source media="(max-width: 991px) and (orientation:portrait)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: smwidth, height: smheight, cropVariant:'tablet-portrait')}">
+
+        <v:media.exists file="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: smwidth, height: smheight, cropVariant:'tablet-landscape') -> v:format.substring(start:'1')}.webp">
+        <source media="(max-width: 991px) and (orientation:landscape)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: smwidth, height: smheight, cropVariant:'tablet-landscape')}.webp"
+                type="image/webp"
+                >
+        </v:media.exists>
+        <source media="(max-width: 991px) and (orientation:landscape)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: smwidth, height: smheight, cropVariant:'tablet-landscape')}">
+
+        <v:media.exists file="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: mdwidth, height: mdheight, cropVariant:'desktop-md') -> v:format.substring(start:'1')}.webp">
+        <source media="(max-width: 1199px) and (min-width: 992px)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: mdwidth, height: mdheight, cropVariant:'desktop-md')}.webp"
+                type="image/webp"
+                >
+        </v:media.exists>
+        <source media="(max-width: 1199px) and (min-width: 992px)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: mdwidth, height: mdheight, cropVariant:'desktop-md')}">
+
+        <v:media.exists file="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: width, height: height, maxWidth: '1920', cropVariant:'default') -> v:format.substring(start:'1')}.webp">
+        <source media="(min-width: 1200px)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: width, height: height, maxWidth: '1920', cropVariant:'default')}.webp"
+                type="image/webp"
+                >
+        </v:media.exists>
+        <source media="(min-width: 1200px)"
+                srcset="{f:uri.image(src:'{file.uid}',treatIdAsReference:'1', width: width, height: height, maxWidth: '1920', cropVariant:'default')}">
+        
+        <f:image treatIdAsReference="1"
+                        loading="{lazyLoading}"
+                        class="{cssClass} {f:if(condition:shadow,then:'shadow')}" 
+                        maxWidth="1920"
+                        width="{width}"
+                        height="{height}"
+                        src="{file.uid}" 
+                        title="{file.title}" 
+                        alt="{file.alternative}"
+                        crop="{file.crop}" />
+    </picture>
+</html>

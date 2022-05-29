@@ -1,0 +1,44 @@
+{
+  "name": "failx/template-fhaarstyle",
+  "type": "typo3-cms-extension",
+  "description": "",
+  "keywords": [
+    "TYPO3 CMS",
+    "Extension"
+  ],
+  "license": [
+    "GPL-3.0-or-later"
+  ],
+  "require": {
+    "typo3/cms-core": ">=11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Failx\\Fhaarstyle\\": "Classes/"
+    }
+  },
+  "replace": {
+    "fhaarstyle": "self.version",
+    "typo3-ter/fx-fhaarstyle": "self.version"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "mkdir -p .Build/Web/typo3conf/ext/",
+      "[ -L .Build/Web/typo3conf/ext/fhaarstyle ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/fhaarstyle"
+    ]
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin",
+    "platform": {
+      "php": "8.0"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "fhaarstyle",
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/Web"
+    }
+  }
+}

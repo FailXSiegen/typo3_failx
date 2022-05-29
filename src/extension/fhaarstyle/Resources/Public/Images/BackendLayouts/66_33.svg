@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="86"
+   height="128"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="pdfviewer.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs17" />
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="true"
+     inkscape:zoom="12.904699"
+     inkscape:cx="52.074056"
+     inkscape:cy="59.125751"
+     inkscape:window-width="2544"
+     inkscape:window-height="1361"
+     inkscape:window-x="82"
+     inkscape:window-y="-18"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg13">
+    <inkscape:grid
+       type="xygrid"
+       id="grid100" />
+  </sodipodi:namedview>
+  <path
+     fill="#FFF"
+     d="M0 0h86v128H0z"
+     id="path9" />
+  <path
+     fill="#333"
+     d="M64 30h20v68H64zM2 30h60v68H2zm0 80h26v16H2zm28 0h26v16H30zm28 0h26v16H58zM2 2h82v16H2zm0 98h82v8H2zm0-80h82v8H2z"
+     id="path11"
+     style="fill:#333333" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:17.3333px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none"
+     x="2.2876713"
+     y="66.315071"
+     id="text2365"><tspan
+       sodipodi:role="line"
+       id="tspan2363"
+       x="2.2876713"
+       y="66.315071">66/33</tspan></text>
+  <rect
+     style="fill:#ffffff;stroke-width:2.2697"
+     id="rect4813"
+     width="5"
+     height="68"
+     x="57"
+     y="30" />
+  <rect
+     style="fill:#333333"
+     id="rect6038"
+     width="4"
+     height="68"
+     x="60"
+     y="30" />
+  <rect
+     style="fill:#333333"
+     id="rect6040"
+     width="2"
+     height="68"
+     x="58"
+     y="30" />
+  <rect
+     style="fill:#ffffff"
+     id="rect6254"
+     width="3"
+     height="68"
+     x="54"
+     y="30" />
+</svg>

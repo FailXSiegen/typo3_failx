@@ -1,0 +1,63 @@
+lib {
+    contentElement {
+        templateRootPaths {
+            20 = EXT:fhaarstyle/Resources/Private/Extensions/FluidStyledContent/Templates/
+        }
+        partialRootPaths {
+            20 = EXT:fhaarstyle/Resources/Private/Extensions/FluidStyledContent/Partials/
+        }
+        layoutRootPaths {
+            20 = EXT:fhaarstyle/Resources/Private/Extensions/FluidStyledContent/Layouts/
+        }
+    }
+    fluidContent < .contentElement
+
+    getLayoutFromElement = COA
+    getLayoutFromElement {
+        5 = LOAD_REGISTER
+        5 {
+            contentUid = TEXT
+            contentUid.current = 1
+        }
+        20 = TEXT
+        20 {
+            data = DB:tt_content:{register:contentUid}:layout
+            data.insertData = 1
+        }
+        90 = RESTORE_REGISTER
+    }
+}
+tt_content {
+    project_gallery =< lib.contentElement
+    project_gallery {
+        templateName = ProjectGallery
+        dataProcessing {
+            10 = Failx\Fhaarstyle\DataProcessing\AddProjectsToContentProcessor
+            10 {
+                as = projects
+            }
+        }
+    }
+    textimageleft =< lib.contentElement
+    textimageleft {
+        templateName = TextImageLeft
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                as=image
+            }
+        }
+    }
+    textimageright =< lib.contentElement
+    textimageright {
+        templateName = TextImageRight
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                as=image
+            }
+        }
+    }
+}

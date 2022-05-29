@@ -1,0 +1,21 @@
+base: 'https://www.fhaarstyle.de'
+baseVariants:
+  -
+    base: 'https://fhaarstyle.ddev.site'
+    condition: 'getenv("TYPO3_CONTEXT") == "Development"'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de
+    direction: ltr
+    flag: de
+    websiteTitle: ''
+rootPageId: 2
+websiteTitle: 'Fhaarstyle - Mobile Friseurmeisterin'
