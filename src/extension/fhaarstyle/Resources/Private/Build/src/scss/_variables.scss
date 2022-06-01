@@ -2,13 +2,15 @@ $white: #fff;
 $grey: #D1D1D6;
 $darkgrey: #767676;
 $neongreen: #00f700;
+$green: #00b838;
 $themeColours: (
   "white": $white,
   "grey": $grey,
   "neongreen": $neongreen,
+  "green": $green,
   "darkgrey": $darkgrey
 );
-$primary: $neongreen;
+$primary: $green;
 $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 $spacer: 1rem;

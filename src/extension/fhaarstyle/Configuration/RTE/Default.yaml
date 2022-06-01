@@ -28,9 +28,9 @@ editor:
       - { name: styles }
 
     justifyClasses:
-      - text-left
+      - text-start
       - text-center
-      - text-right
+      - text-end
       - text-justify
 
     extraPlugins:

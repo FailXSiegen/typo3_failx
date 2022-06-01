@@ -15,7 +15,212 @@
 			<trans-unit id="textimageright.description" xml:space="preserve">
 				<source>Weiße Box mit Text links und Bild vollflächig rechts</source>
 			</trans-unit>
+			<trans-unit id="overflow.hidden" xml:space="preserve">
+				<source>Overflow hidden</source>
+			</trans-unit>
+			<trans-unit id="particle.active.description" xml:space="preserve">
+				<source>Hides the content "over" the div container.</source>
+			</trans-unit>
+			<trans-unit id="row" xml:space="preserve">
+				<source>Row</source>
+			</trans-unit>
+			<trans-unit id="row.space" xml:space="preserve">
+				<source>Row space</source>
+			</trans-unit>
+			<trans-unit id="row.space.description" xml:space="preserve">
+				<source>Defines the spaces between the items if the width definition does not sums to 100</source>
+			</trans-unit>
+			<trans-unit id="row.item" xml:space="preserve">
+				<source>Row content</source>
+			</trans-unit>
+			<trans-unit id="row.item.description" xml:space="preserve">
+				<source>Defines the item alignment</source>
+			</trans-unit>
+			
+			<trans-unit id="header.color" xml:space="preserve">
+				<source>Overwrite header color</source>
+			</trans-unit>
+			<trans-unit id="header.color.description" xml:space="preserve">
+				<source>Depends on background-class or page theme the header gets a defaut color. You can overwrite this color with this option.</source>
+			</trans-unit>
 
+			<trans-unit id="scroll.background" xml:space="preserve">
+				<source>Scroll background</source>
+			</trans-unit>
+
+			<trans-unit id="scroll.background.description" xml:space="preserve">
+				<source>Animated scroll background item</source>
+			</trans-unit>
+
+			<trans-unit id="1col.title" xml:space="preserve">
+				<source>1 column</source>
+			</trans-unit>
+            <trans-unit id="1col.description" xml:space="preserve">
+				<source>Inserts a 1-column grid for content. Use for background color combinations or full-width content.</source>
+			</trans-unit>
+            <trans-unit id="2cols.title" xml:space="preserve">
+				<source>2 columns</source>
+			</trans-unit>
+            <trans-unit id="2cols.description" xml:space="preserve">
+				<source>Inserts a 2-columns grid for content. The width of each column may be set for different screen sizes.</source>
+			</trans-unit>
+            <trans-unit id="3cols.title" xml:space="preserve">
+				<source>3 columns</source>
+			</trans-unit>
+            <trans-unit id="3cols.description" xml:space="preserve">
+				<source>Inserts a 3-columns grid for content.</source>
+			</trans-unit>
+            <trans-unit id="4cols.title" xml:space="preserve">
+				<source>4 columns</source>
+			</trans-unit>
+            <trans-unit id="4cols.description" xml:space="preserve">
+				<source>Inserts a 4-columns grid for content.</source>
+			</trans-unit>
+			<trans-unit id="grid.sheet.description" xml:space="preserve">
+				<source>Sets properties for different viewports</source>
+			</trans-unit>
+            <trans-unit id="grid.sheet.mediumDevices" xml:space="preserve">
+				<source>Desktop</source>
+			</trans-unit>
+            <trans-unit id="grid.sheet.smallDevices" xml:space="preserve">
+				<source>Small devices</source>
+			</trans-unit>
+            <trans-unit id="grid.sheet.extraSmallDevices" xml:space="preserve">
+				<source>Extra small</source>
+			</trans-unit>
+            <trans-unit id="grid.sheet.largeDevices" xml:space="preserve">
+				<source>Large</source>
+			</trans-unit>
+            <trans-unit id="grid.sheet.extraLargeDevices" xml:space="preserve">
+				<source>Extra Large</source>
+			</trans-unit>
+			 <trans-unit id="grid.sheet.extraextraLargeDevices" xml:space="preserve">
+				<source>Extra extra Large</source>
+			</trans-unit>
+            <trans-unit id="grid.sheet.customClasses" xml:space="preserve">
+				<source>Custom classes</source>
+			</trans-unit>
+            <trans-unit id="grid.label.col1" xml:space="preserve">
+				<source>Column 1</source>
+			</trans-unit>
+            <trans-unit id="grid.label.col2" xml:space="preserve">
+				<source>Column 2</source>
+			</trans-unit>
+            <trans-unit id="grid.label.col3" xml:space="preserve">
+				<source>Column 3</source>
+			</trans-unit>
+            <trans-unit id="grid.label.col4" xml:space="preserve">
+				<source>Column 4</source>
+			</trans-unit>
+            <trans-unit id="grid.label.moreWidth" xml:space="preserve">
+				<source>More width</source>
+			</trans-unit>
+            <trans-unit id="grid.label.notset" xml:space="preserve">
+				<source>not set</source>
+			</trans-unit>
+            <trans-unit id="grid.label.moreOptions" xml:space="preserve">
+				<source>More options</source>
+			</trans-unit>
+            <trans-unit id="grid.label.special" xml:space="preserve">
+				<source>Special</source>
+			</trans-unit>
+            <trans-unit id="grid.label.hidden" xml:space="preserve">
+				<source>hidden</source>
+			</trans-unit>
+            <trans-unit id="grid.label.visible" xml:space="preserve">
+				<source>visible</source>
+			</trans-unit>
+            <trans-unit id="grid.label.autoLayout" xml:space="preserve">
+				<source>Auto layout (col)</source>
+			</trans-unit>
+            <trans-unit id="grid.label.variableWidth" xml:space="preserve">
+				<source>Variable width</source>
+			</trans-unit>
+            <trans-unit id="grid.label.rowCustom" xml:space="preserve">
+				<source>Custom row classes</source>
+			</trans-unit>
+
+            <trans-unit id="grid.sheet.animation" xml:space="preserve">
+				<source>Animation</source>
+			</trans-unit>
+			<trans-unit id="grid.sheet.controls" xml:space="preserve">
+				<source>Controls</source>
+			</trans-unit>
+			<trans-unit id="grid.sheet.options" xml:space="preserve">
+				<source>Options</source>
+			</trans-unit>
+
+            <trans-unit id="grid.sheet.layout" xml:space="preserve">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="grid.label.style" xml:space="preserve">
+				<source>Style</source>
+			</trans-unit>
+			
+            <trans-unit id="grid.sheet.rowClasses" xml:space="preserve">
+				<source>Row classes</source>
+			</trans-unit>
+            <trans-unit id="grid.label.rowValign" xml:space="preserve">
+				<source>Vertical alignment</source>
+			</trans-unit>
+            <trans-unit id="grid.rowValign.alignItemsStart" xml:space="preserve">
+				<source>Start</source>
+			</trans-unit>
+            <trans-unit id="grid.rowValign.alignItemsCenter" xml:space="preserve">
+				<source>Center</source>
+			</trans-unit>
+            <trans-unit id="grid.rowValign.alignItemsEnd" xml:space="preserve">
+				<source>End</source>
+			</trans-unit>
+            <trans-unit id="grid.label.rowHalign" xml:space="preserve">
+				<source>Horiztontal alignment</source>
+			</trans-unit>
+            <trans-unit id="grid.rowHalign.justifyContentStart" xml:space="preserve">
+				<source>Start</source>
+			</trans-unit>
+            <trans-unit id="grid.rowHalign.justifyContentCenter" xml:space="preserve">
+				<source>Center</source>
+			</trans-unit>
+            <trans-unit id="grid.rowHalign.justifyContentEnd" xml:space="preserve">
+				<source>End</source>
+			</trans-unit>
+            <trans-unit id="grid.rowHalign.justifyContentAround" xml:space="preserve">
+				<source>Around</source>
+			</trans-unit>
+            <trans-unit id="grid.rowHalign.justifyContentBetween" xml:space="preserve">
+				<source>Between</source>
+			</trans-unit>
+
+            <trans-unit id="grid.label.none" xml:space="preserve">
+				<source>none</source>
+			</trans-unit>
+			<trans-unit id="grid.label.yes" xml:space="preserve">
+				<source>yes</source>
+			</trans-unit>
+			<trans-unit id="grid.label.no" xml:space="preserve">
+				<source>no</source>
+			</trans-unit>
+			<trans-unit id="imagecols_xxl" xml:space="preserve">
+				<source>Number of Columns (XXL)</source>
+			</trans-unit>
+			<trans-unit id="imagecols_xl" xml:space="preserve">
+				<source>Number of Columns (XL)</source>
+			</trans-unit>
+			<trans-unit id="imagecols_lg" xml:space="preserve">
+				<source>Number of Columns (LG)</source>
+			</trans-unit>
+			<trans-unit id="imagecols_md" xml:space="preserve">
+				<source>Number of Columns (MD)</source>
+			</trans-unit>
+			<trans-unit id="imagecols_sm" xml:space="preserve">
+				<source>Number of Columns (SM)</source>
+			</trans-unit>
+			<trans-unit id="space.start" xml:space="preserve">
+				<source>Space Left</source>
+			</trans-unit>
+			<trans-unit id="space.end" xml:space="preserve">
+				<source>Space Right</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

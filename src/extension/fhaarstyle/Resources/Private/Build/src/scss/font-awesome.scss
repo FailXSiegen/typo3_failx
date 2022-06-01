@@ -1,0 +1,31 @@
+$fa-font-path: '../Fonts/FontAwesome/';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_functions.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_variables.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_mixins.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_core.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_sizing.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_fixed-width.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_list.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_bordered-pulled.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_animated.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_rotated-flipped.scss';
+@import '../../../../Public/Vendor/@fortawesome/fontawesome-free/scss/_stacked.scss';
+
+
+:root,
+:host {
+    --#{$fa-css-prefix}-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+.fab,
+.#{$fa-css-prefix}-brands {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+}
+
+@each $name,
+$icon in $fa-brand-icons {
+    .#{$fa-css-prefix}-#{$name}:before {
+        content: unquote("\"#{ $icon }\"");
+    }
+}

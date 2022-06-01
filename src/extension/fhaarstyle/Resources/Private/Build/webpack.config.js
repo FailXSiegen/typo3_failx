@@ -76,20 +76,20 @@ module.exports = {
             //         }
             //     ]
             // },
-            {
-                // Apply rule for fonts files
-                test: /\.(woff|woff2|ttf|otf|eot)$/,
-                use: [
-                    {
-                        // Using file-loader too
-                        loader: "file-loader",
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'fonts/'
-                        }
-                    }
-                ]
-            }
+            // {
+            //     // Apply rule for fonts files
+            //     test: /\.(woff|woff2|ttf|otf|eot)$/,
+            //     use: [
+            //         {
+            //             // Using file-loader too
+            //             loader: "file-loader",
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'fonts/'
+            //             }
+            //         }
+            //     ]
+            // }
         ],
     },
     plugins: [
@@ -120,6 +120,7 @@ module.exports = {
         'accordion': './src/scss/accordion.scss',
         'main': './src/scss/main.scss',
         'glightboxcss': './src/scss/glightbox.scss',
+        'fontawesome': './src/scss/font-awesome.scss'
     },
 
     // Path and filename of your result bundle.

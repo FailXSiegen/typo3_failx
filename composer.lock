@@ -4,8 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "103f04db21e4d719318f055fb9d9825c",
+    "content-hash": "285ecc018b06ca3c75f61abc82417433",
     "packages": [
+        {
+            "name": "b13/container",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/b13/container.git",
+                "reference": "625ad7c08074ba8846954cc64061ce5bca1fb52e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/b13/container/zipball/625ad7c08074ba8846954cc64061ce5bca1fb52e",
+                "reference": "625ad7c08074ba8846954cc64061ce5bca1fb52e",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-backend": "^9.5 || ^10.4 || ^11.5"
+            },
+            "replace": {
+                "typo3-ter/container": "self.version"
+            },
+            "require-dev": {
+                "b13/container-example": "dev-feature/content_defender",
+                "codeception/codeception": "^4.1",
+                "codeception/module-asserts": "^1.0",
+                "codeception/module-db": "^1.0",
+                "codeception/module-webdriver": "^1.0",
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "ichhabrecht/content-defender": "^3.2",
+                "phpstan/phpstan": "^0.12.11",
+                "phpunit/phpunit": "^8.4",
+                "typo3/cms-fluid-styled-content": "^10.4",
+                "typo3/cms-info": "^10.4",
+                "typo3/cms-install": "^10.4",
+                "typo3/cms-workspaces": "^10.4",
+                "typo3/coding-standards": "^0.5",
+                "typo3/testing-framework": "^6"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web",
+                    "extension-key": "container"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "B13\\Container\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Create Custom Container Content Elements for TYPO3",
+            "homepage": "https://b13.com",
+            "support": {
+                "issues": "https://github.com/b13/container/issues",
+                "source": "https://github.com/b13/container/tree/1.6.1"
+            },
+            "time": "2022-05-18T08:20:38+00:00"
+        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "2.0.7",
@@ -1335,16 +1397,16 @@
         },
         {
             "name": "helhum/typo3-console",
-            "version": "v7.1.1",
+            "version": "v7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
-                "reference": "bd81b904ca7ab552b7d134b83918552e5bffed30"
+                "reference": "081364750b70c00c67f40975e5b4bab4a635df20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/bd81b904ca7ab552b7d134b83918552e5bffed30",
-                "reference": "bd81b904ca7ab552b7d134b83918552e5bffed30",
+                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/081364750b70c00c67f40975e5b4bab4a635df20",
+                "reference": "081364750b70c00c67f40975e5b4bab4a635df20",
                 "shasum": ""
             },
             "require": {
@@ -1375,6 +1437,7 @@
                 "symfony/expression-language": "^4.4 || ^5.0",
                 "symfony/filesystem": "^4.4 || ^5.0",
                 "typo3-console/create-reference-command": "@dev",
+                "typo3-console/sql-command": "@dev",
                 "typo3/cms-filemetadata": "^11.5.3 || dev-main",
                 "typo3/cms-recordlist": "^11.5.3 || dev-main",
                 "typo3/cms-reports": "^11.5.3 || dev-main"
@@ -1385,7 +1448,6 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-latest": "7.1.x-dev",
                     "dev-main": "7.1.x-dev"
                 },
                 "typo3/cms": {
@@ -1438,7 +1500,75 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-11T09:56:57+00:00"
+            "time": "2022-05-31T06:51:43+00:00"
+        },
+        {
+            "name": "jweiland/sync-crop-areas",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jweiland-net/sync_crop_areas.git",
+                "reference": "4b30132bc60eacc76b7775c74b24540f0ac09b1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jweiland-net/sync_crop_areas/zipball/4b30132bc60eacc76b7775c74b24540f0ac09b1d",
+                "reference": "4b30132bc60eacc76b7775c74b24540f0ac09b1d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4 || ^8.0",
+                "typo3/cms-core": "^10.4.19 || ^11.5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "nimut/testing-framework": "^6.0",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "sync_crop_areas",
+                    "app-dir": ".build",
+                    "web-dir": ".build/public"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JWeiland\\SyncCropAreas\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Froemken",
+                    "email": "sfroemken@jweiland.net",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Sync first found crop area to all other CropVariants",
+            "homepage": "http://www.jweiland.net",
+            "keywords": [
+                "TYPO3 CMS",
+                "area",
+                "crop",
+                "jweiland.net",
+                "sync",
+                "synchronize",
+                "typo3",
+                "variants"
+            ],
+            "support": {
+                "email": "projects@jweiland.net",
+                "issues": "https://github.com/jweiland-net/sync_crop_areas/issues",
+                "source": "https://github.com/jweiland-net/sync_crop_areas/tree/2.2.1"
+            },
+            "time": "2022-02-04T12:48:19+00:00"
         },
         {
             "name": "lolli42/finediff",
@@ -1789,6 +1919,62 @@
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
             },
             "time": "2022-03-15T21:29:03+00:00"
+        },
+        {
+            "name": "plan2net/webp",
+            "version": "4.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plan2net/webp.git",
+                "reference": "5aca9210e5e183e984b2ca4585ccbc3bbfed79a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plan2net/webp/zipball/5aca9210e5e183e984b2ca4585ccbc3bbfed79a1",
+                "reference": "5aca9210e5e183e984b2ca4585ccbc3bbfed79a1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=7.2.0",
+                "typo3/cms-core": "^10.4|^11.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "webp"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Plan2net\\Webp\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Wolfgang Klinger",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Martin Kutschker",
+                    "role": "reStructuredText Documentation"
+                },
+                {
+                    "name": "Team Wonderland",
+                    "role": "Support and review"
+                }
+            ],
+            "description": "Creates WebP copies for images (TYPO3 CMS)",
+            "homepage": "https://www.plan2.net/",
+            "support": {
+                "issues": "https://github.com/plan2net/webp/issues",
+                "source": "https://github.com/plan2net/webp/tree/4.1.2"
+            },
+            "time": "2022-02-18T12:15:13+00:00"
         },
         {
             "name": "psr/cache",
@@ -5967,6 +6153,56 @@
             "time": "2022-05-10T08:49:51+00:00"
         },
         {
+            "name": "typo3/cms-filemetadata",
+            "version": "v11.5.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/filemetadata.git",
+                "reference": "74191e460da867fe5b577947e3f0528bcbb71f26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/filemetadata/zipball/74191e460da867fe5b577947e3f0528bcbb71f26",
+                "reference": "74191e460da867fe5b577947e3f0528bcbb71f26",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "11.5.10"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "11.5.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "filemetadata"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add advanced metadata to File.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2022-05-10T08:49:51+00:00"
+        },
+        {
             "name": "typo3/cms-fluid",
             "version": "v11.5.10",
             "source": {
@@ -6462,6 +6698,74 @@
             "support": {
                 "chat": "https://typo3.org/help",
                 "docs": "https://docs.typo3.org",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2022-05-10T08:49:51+00:00"
+        },
+        {
+            "name": "typo3/cms-redirects",
+            "version": "v11.5.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/redirects.git",
+                "reference": "f7929d0a426e5f6d0d6514c6120c7d1bcfbce336"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/redirects/zipball/f7929d0a426e5f6d0d6514c6120c7d1bcfbce336",
+                "reference": "f7929d0a426e5f6d0d6514c6120c7d1bcfbce336",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.13.8",
+                "psr/http-message": "^1.0",
+                "psr/log": "^1.0",
+                "symfony/console": "^5.4",
+                "typo3/cms-backend": "11.5.10",
+                "typo3/cms-core": "11.5.10",
+                "typo3fluid/fluid": "^2.7.1"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "suggest": {
+                "typo3/cms-reports": "Get reports of redirects",
+                "typo3/cms-scheduler": "Execute commands to update redirect status"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "11.5.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "redirects",
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Redirects\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Custom redirects in TYPO3.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-redirects/11.5/en-us/",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },

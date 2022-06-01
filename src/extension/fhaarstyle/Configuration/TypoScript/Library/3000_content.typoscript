@@ -28,16 +28,6 @@ lib {
     }
 }
 tt_content {
-    project_gallery =< lib.contentElement
-    project_gallery {
-        templateName = ProjectGallery
-        dataProcessing {
-            10 = Failx\Fhaarstyle\DataProcessing\AddProjectsToContentProcessor
-            10 {
-                as = projects
-            }
-        }
-    }
     textimageleft =< lib.contentElement
     textimageleft {
         templateName = TextImageLeft
@@ -60,4 +50,158 @@ tt_content {
             }
         }
     }
+}
+
+tt_content.accordion < lib.contentElement
+tt_content.accordion {
+  templateName = accordion
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    101 = B13\Container\DataProcessing\ContainerProcessor
+    101 {
+      colPos = 101
+      as = content
+    }
+  }
+}
+
+tt_content.slider < lib.contentElement
+tt_content.slider {
+  templateName = slider
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    101 = B13\Container\DataProcessing\ContainerProcessor
+    101 {
+      colPos = 101
+      as = content
+    }
+  }
+}
+
+
+tt_content.scrollcontainer < lib.contentElement
+tt_content.scrollcontainer {
+  templateName = scrollcontainer
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    101 = B13\Container\DataProcessing\ContainerProcessor
+    101 {
+      colPos = 101
+      as = content
+    }
+  }
+}
+
+
+tt_content.headerrotate < lib.contentElement
+tt_content.headerrotate {
+  templateName = headerrotate
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    102 = B13\Container\DataProcessing\ContainerProcessor
+    102 {
+      colPos = 102
+      as = content
+    }
+  }
+}
+
+tt_content.bgcontainer < lib.contentElement
+tt_content.bgcontainer {
+  templateName = bgcontainer
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    10 {
+        references.fieldName = image
+    }   
+    103 = B13\Container\DataProcessing\ContainerProcessor
+    103 {
+      colPos = 103
+      as = content
+    }
+  }
+}
+
+tt_content.1col < lib.contentElement
+tt_content.1col {
+  templateName = 1col
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    101 = B13\Container\DataProcessing\ContainerProcessor
+    101 {
+      colPos = 101
+      as = col
+    }
+  }
+}
+
+tt_content.2cols < lib.contentElement
+tt_content.2cols {
+  templateName = 2cols
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = col1
+    }
+    202 = B13\Container\DataProcessing\ContainerProcessor
+    202 {
+     colPos = 202
+     as = col2
+    }
+  }
+}
+
+tt_content.3cols < lib.contentElement
+tt_content.3cols {
+  templateName = 3cols
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    301 = B13\Container\DataProcessing\ContainerProcessor
+    301 {
+      colPos = 301
+      as = col1
+    }
+    302 = B13\Container\DataProcessing\ContainerProcessor
+    302 {
+     colPos = 302
+     as = col2
+    }
+    303 = B13\Container\DataProcessing\ContainerProcessor
+    303 {
+     colPos = 303
+     as = col3
+    }
+  }
+}
+
+
+tt_content.4cols < lib.contentElement
+tt_content.4cols {
+  templateName = 4cols
+  templateRootPaths.10 = EXT:fhaarstyle/Resources/Private/Content/Templates
+  dataProcessing {
+    401 = B13\Container\DataProcessing\ContainerProcessor
+    401 {
+      colPos = 401
+      as = col1
+    }
+    402 = B13\Container\DataProcessing\ContainerProcessor
+    402 {
+     colPos = 402
+     as = col2
+    }
+    403 = B13\Container\DataProcessing\ContainerProcessor
+    403 {
+     colPos = 403
+     as = col3
+    }
+    404 = B13\Container\DataProcessing\ContainerProcessor
+    404 {
+     colPos = 404
+     as = col4
+    }
+  }
 }

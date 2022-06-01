@@ -1,14 +1,14 @@
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = fileadmin/favicon.ico
+    shortcutIcon = EXT:fhaarstyle/Resources/Public/Images/Favicon/favicon.ico
     10 = FLUIDTEMPLATE
     10 {
         variables {
             rootPageUid = TEXT
-            rootPageUid.value = {$plugin.tx_fxtemplateshhhuerth.settings.rootPageUid}
+            rootPageUid.value = {$plugin.tx_fhaarstyle.settings.rootPageUid}
             logoPath = TEXT
-            logoPath.value = {$plugin.tx_fxtemplateshhhuerth.settings.logoPath}
+            logoPath.value = {$plugin.tx_fhaarstyle.settings.logoPath}
         }
         templateName = TEXT
         templateName.stdWrap {
@@ -38,7 +38,7 @@ page {
             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             10 {
                 special = directory
-                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.headerNavPageUid}
+                special.value = {$plugin.tx_fhaarstyle.settings.headerNavPageUid}
                 levels = 1
                 includeSpacer = 1
                 as = topNavigation
@@ -46,7 +46,7 @@ page {
             20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             20 {
                 special = directory
-                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.mainNavPageUid}
+                special.value = {$plugin.tx_fhaarstyle.settings.mainNavPageUid}
                 levels = 3
                 includeSpacer = 1
                 as = mainNavigation
@@ -55,7 +55,7 @@ page {
             30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             30 {
                 special = directory
-                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.footerNavPageUid}
+                special.value = {$plugin.tx_fhaarstyle.settings.footerNavPageUid}
                 levels = 1
                 includeSpacer = 1
                 as = footerNavigation
@@ -63,7 +63,7 @@ page {
             40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             40 {
                 special = directory
-                special.value = {$plugin.tx_fxtemplateshhhuerth.settings.ctaNavPageUid}
+                special.value = {$plugin.tx_fhaarstyle.settings.ctaNavPageUid}
                 levels = 1
                 as = ctaNavigation
                 dataProcessing {
@@ -90,7 +90,7 @@ page {
             media = all
         }
         fonts = EXT:fhaarstyle/Resources/Public/StyleSheet/fonts.css
-        fontawesome = EXT:fhaarstyle/Resources/Public/StyleSheet/font-awesome.css
+        fontawesome = EXT:fhaarstyle/Resources/Public/StyleSheet/fontawesome.css
         custom = EXT:fhaarstyle/Resources/Public/StyleSheet/main.css
     }
     includeJSFooterlibs {
@@ -106,10 +106,14 @@ page {
         viewport = width=device-width, initial-scale=1.0
     }
     headerData.1 = TEXT
-    headerData.1.value(
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3f07e175-861f-4e8e-906a-220fa79dd2e3" data-blockingmode="auto" type="text/javascript"></script>
+    headerData.1.value (
+<link rel="apple-touch-icon" sizes="180x180" href="/typo3conf/ext/fhaarstyle/Resources/Public/Images/Favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/fhaarstyle/Resources/Public/Images/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/fhaarstyle/Resources/Public/Images/Favicon/favicon-16x16.png">
+<link rel="manifest" href="/typo3conf/ext/fhaarstyle/Resources/Public/Images/Favicon/site.webmanifest">
+<link rel="mask-icon" href="/typo3conf/ext/fhaarstyle/Resources/Public/Images/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
     )
-
-
 
 }

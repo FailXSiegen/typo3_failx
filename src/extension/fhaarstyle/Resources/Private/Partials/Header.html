@@ -1,13 +1,12 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 <header id="head">
-    <div class="container-fluid">
-        <div class="row align-items-end">
+    <div class="container">
+        <div class="row align-items-center">
             <div class="col-12 col-xl-3 position-relative">
                 <div class="row">
                     <div class="col-9 col-xl-auto">
                         <f:if condition="{logoPath}">
-                            <div class="pt-3 mt-3 pb-3 pb-xl-0 position-relative logo" itemscope
-                                itemtype="http://schema.org/Organization">
+                            <div class="position-relative logo" itemscope itemtype="http://schema.org/Organization">
 
                                 <f:link.typolink additionalAttributes="{'itemprop':'url'}" parameter="{rootPageUid}">
 
@@ -21,9 +20,8 @@
                     </div>
                     <div class="col-3 d-xl-none d-flex align-items-center justify-content-end">
                         <div class="navbar-header navbar-expand-xl navbar-dark">
-                            <button class="navbar-toggler bg-darkgrey" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navwrap" aria-controls="navwrap" aria-expanded="false"
-                                aria-label="Toggle navigation">
+                            <button class="navbar-toggler bg-green" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#navwrap" aria-controls="navwrap" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon p-4"></span>
                             </button>
                         </div>
@@ -31,93 +29,119 @@
                 </div>
             </div>
             <div class="col-12 col-xl-9 pe-xl-5 d-flex justify-content-center">
-                <nav class="navbar navbar-expand-xl w-100 p-0" id="nav" itemscope
+                <nav class="navbar navbar-expand-xl w-100 ms-0 ms-md-5 p-0" id="nav" itemscope
                     itemtype="http://schema.org/SiteNavigationElement">
-                    <div class="collapse navbar-collapse" id="navwrap">
-                        <ul class="nav navbar-nav row w-100 p-0">
-                            <f:for as="nav" each="{mainNavigation}" iteration="mainnaviterator">
-                                <li class="nav-item me-3 dropdown l1 col text-center {f:if(condition: mainnaviterator.isFirst, then: 'pl-lg-0')} {f:if(condition: nav.children,then:'dropdown hassub')} {f:if(condition: nav.current,then:'current')}"
-                                    itemprop="name">
-                                    <f:if condition="{nav.children}">
-                                        <f:then>
-                                            <a href="{nav.link}"
-                                                target="{f:if(condition:nav.target, then:'{nav.target}',else:'_self')}"
-                                                title="{nav.title}">
-                                                {nav.title}
-                                            </a>
-                                            <a role="button" class="dropdown-toggle dropdown-toggle-split"
-                                                data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                                aria-expanded="false">
-                                                <span class="visually-hidden">Toggle Dropdown</span>
-                                            </a>
+                    <div class="offcanvas offcanvas-end navbar-collapse" tabindex="-1" id="navwrap">
+                        <div class="offcanvas-body">
+                            <ul class="nav navbar-nav row p-0">
+                                <f:for as="nav" each="{mainNavigation}" iteration="mainnaviterator">
+                                    <li class="nav-item me-3 dropdown l1 col text-center {f:if(condition: mainnaviterator.isFirst, then: 'pl-lg-0')} {f:if(condition: nav.children,then:'dropdown hassub')} {f:if(condition: nav.current,then:'current')}"
+                                        itemprop="name">
+                                        <f:if condition="{nav.children}">
+                                            <f:then>
+                                                <a href="{nav.link}" class="text-nowrap"
+                                                    target="{f:if(condition:nav.target, then:'{nav.target}',else:'_self')}">
+                                                    {nav.title}
+                                                </a>
+                                                <a role="button" class="dropdown-toggle dropdown-toggle-split"
+                                                    data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                    aria-expanded="false">
+                                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                                </a>
 
-                                            <ul class="dropdown-menu lvl2 mt-0 w-100" role="menu">
-                                                <f:for as="secondlevel" each="{nav.children}">
-                                                    <li
-                                                        class="nav-item text-center text-xl-start {f:if(condition: secondlevel.children,then:'dropdown hassub')} {f:if(condition: secondlevel.current,then:'current')}">
-                                                        <f:if condition="{secondlevel.data.doktype} == 199">
-                                                            <f:then>
-                                                                <div class="dropdown-divider"></div>
-                                                            </f:then>
-                                                            <f:else>
-                                                                <f:if condition="{secondlevel.children}">
-                                                                    <f:then>
-                                                                        <div class="dropdown dropend">
-                                                                            <a href="{secondlevel.link}" class="ps-3"
-                                                                                target="{f:if(condition:nav.target, then:'{secondlevel.target}',else:'_self')}"
+                                                <ul class="dropdown-menu lvl2 mt-0" role="menu">
+                                                    <f:for as="secondlevel" each="{nav.children}">
+                                                        <li
+                                                            class="nav-item text-center text-xl-start {f:if(condition: secondlevel.children,then:'dropdown hassub')} {f:if(condition: secondlevel.current,then:'current')}">
+                                                            <f:if condition="{secondlevel.data.doktype} == 199">
+                                                                <f:then>
+                                                                    <div class="dropdown-divider"></div>
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <f:if condition="{secondlevel.children}">
+                                                                        <f:then>
+                                                                            <div class="dropdown dropend">
+                                                                                <a href="{secondlevel.link}"
+                                                                                    class="ps-3 text-nowrap"
+                                                                                    target="{f:if(condition:nav.target, then:'{secondlevel.target}',else:'_self')}">
+                                                                                    {secondlevel.title}
+                                                                                </a>
+                                                                                <a role="button"
+                                                                                    class="dropdown-toggle dropdown-toggle-split float-xl-end pe-3"
+                                                                                    data-bs-toggle="dropdown"
+                                                                                    data-bs-auto-close="outside"
+                                                                                    aria-expanded="false">
+                                                                                    <span class="visually-hidden">Toggle
+                                                                                        Dropdown</span>
+                                                                                </a>
+                                                                                <div
+                                                                                    class="dropdown-menu text-center text-xl-start">
+                                                                                    <f:for as="thirdlevel"
+                                                                                        each="{secondlevel.children}">
+                                                                                        <a href="{thirdlevel.link}"
+                                                                                            class="dropdown-item text-nowrap"
+                                                                                            target="{f:if(condition:thirdlevel.target, then:'{thirdlevel.target}',else:'_self')}">
+                                                                                            {thirdlevel.title}
+                                                                                        </a>
+                                                                                    </f:for>
+                                                                                </div>
+                                                                            </div>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            <a href="{secondlevel.link}"
+                                                                                target="{f:if(condition:secondlevel.target, then:'{secondlevel.target}',else:'_self')}"
+                                                                                class="dropdown-item"
                                                                                 title="{secondlevel.title}">
                                                                                 {secondlevel.title}
                                                                             </a>
-                                                                            <a role="button"
-                                                                                class="dropdown-toggle dropdown-toggle-split float-xl-end pe-3"
-                                                                                data-bs-toggle="dropdown"
-                                                                                data-bs-auto-close="outside"
-                                                                                aria-expanded="false">
-                                                                                <span class="visually-hidden">Toggle
-                                                                                    Dropdown</span>
-                                                                            </a>
-                                                                            <div
-                                                                                class="dropdown-menu text-center text-xl-start">
-                                                                                <f:for as="thirdlevel"
-                                                                                    each="{secondlevel.children}">
-                                                                                    <a href="{thirdlevel.link}"
-                                                                                        class="dropdown-item"
-                                                                                        target="{f:if(condition:thirdlevel.target, then:'{thirdlevel.target}',else:'_self')}"
-                                                                                        title="{thirdlevel.title}">
-                                                                                        {thirdlevel.title}
-                                                                                    </a>
-                                                                                </f:for>
-                                                                            </div>
-                                                                        </div>
-                                                                    </f:then>
-                                                                    <f:else>
-                                                                        <a href="{secondlevel.link}"
-                                                                            target="{f:if(condition:secondlevel.target, then:'{secondlevel.target}',else:'_self')}"
-                                                                            class="dropdown-item"
-                                                                            title="{secondlevel.title}">
-                                                                            {secondlevel.title}
-                                                                        </a>
-                                                                    </f:else>
-                                                                </f:if>
-                                                            </f:else>
-                                                        </f:if>
-                                                    </li>
-                                                </f:for>
-                                            </ul>
-                                        </f:then>
-                                        <f:else>
-                                            <a href="{nav.link}"
-                                                target="{f:if(condition:nav.target, then:'{nav.target}',else:'_self')}"
-                                                title="{nav.title}">
-                                                {nav.title}
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:else>
+                                                            </f:if>
+                                                        </li>
+                                                    </f:for>
+                                                </ul>
+                                            </f:then>
+                                            <f:else>
+                                                <a href="{nav.link}" class="text-nowrap"
+                                                    target="{f:if(condition:nav.target, then:'{nav.target}',else:'_self')}">
+                                                    {nav.title}
+                                                </a>
+                                            </f:else>
+                                        </f:if>
+                                    </li>
+                                </f:for>
+
+                            </ul>
+                            <div class="d-block d-xl-none">
+                                <hr />
+                                <f:cObject data="{
+                                    colPos:'0',
+                                    pageUid: '14'
+                                    }" typoscriptObjectPath="lib.dynamicContent" />
+                                <hr />
+                                <ul class="nav navbar-nav row p-0">
+                                    <f:for as="subnav" each="{footerNavigation}" iteration="footernaviterator">
+                                        <li class="nav-item me-3 dropdown l1 col text-center {f:if(condition: footernaviterator.isFirst, then: 'pl-lg-0')} {f:if(condition: subnav.children,then:'dropdown hassub')} {f:if(condition: subnav.current,then:'current')}"
+                                            itemprop="name">
+                                            <a href="{subnav.link}" class="text-nowrap"
+                                                target="{f:if(condition:subnav.target, then:'{subnav.target}',else:'_self')}">
+                                                {subnav.title}
                                             </a>
-                                        </f:else>
-                                    </f:if>
-                                </li>
-                            </f:for>
-                        </ul>
+                                        </li>
+                                    </f:for>
+                                </ul>
+
+                            </div>
+                        </div>
                     </div>
                 </nav>
+                <div class="d-none d-xl-block">
+                    <f:cObject data="{
+                    colPos:'0',
+                    pageUid: '14'
+                    }" typoscriptObjectPath="lib.dynamicContent" />
+                </div>
             </div>
 
         </div>

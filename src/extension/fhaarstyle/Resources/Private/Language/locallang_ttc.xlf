@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:fhaarstyle/Resources/Private/Language/locallang_ttc.xlf" date="2021-10-13T20:22:32Z" product-name="cms">
+		<header/>
+		<body>
+
+			<trans-unit id="class.description" xml:space="preserve">
+				<source>Default and if set up to 567px</source>
+			</trans-unit>
+			<trans-unit id="class.sm.description" xml:space="preserve">
+				<source>from 568px up to 767px</source>
+			</trans-unit>
+			<trans-unit id="class.md.description" xml:space="preserve">
+				<source>from 768px up to 991px</source>
+			</trans-unit>
+			<trans-unit id="class.lg.description" xml:space="preserve">
+				<source>from 992px up to 1199px</source>
+			</trans-unit>
+			<trans-unit id="class.xl.description"  ml:space="preserve">
+				<source>from 1200px up to 1399px</source>
+			</trans-unit>
+			<trans-unit id="class.xxl.description"  ml:space="preserve">
+				<source>from 1400px and above</source>
+			</trans-unit>
+			<trans-unit id="col1Class" resname="col1Class">
+				<source>Column 1 Default</source>
+			</trans-unit>
+			<trans-unit id="col1SmClass" resname="col1SmClass">
+				<source>Column 1 SM</source>
+			</trans-unit>
+			<trans-unit id="col1MdClass" resname="col1MdClass">
+				<source>Column 1 MD</source>
+			</trans-unit>
+			<trans-unit id="col1LgClass" resname="col1LgClass">
+				<source>Column 1 LG </source>
+			</trans-unit>
+			<trans-unit id="col1XlClass" resname="col1XlClass">
+				<source>Column 1 XL</source>
+			</trans-unit>
+			<trans-unit id="col1XxlClass" resname="col1XlClass">
+				<source>Column 1 XXL</source>
+			</trans-unit>
+			<trans-unit id="col1CustomClass" resname="col1CustomClass">
+				<source>Column 1 Custom Class</source>
+			</trans-unit>
+
+			<trans-unit id="col2Class" resname="col2Class">
+				<source>Column 2 Class</source>
+			</trans-unit>
+			<trans-unit id="col2SmClass" resname="col2SmClass">
+				<source>Column 2 SM Class</source>
+			</trans-unit>
+			<trans-unit id="col2MdClass" resname="col2MdClass">
+				<source>Column 2 MD Class</source>
+			</trans-unit>
+			<trans-unit id="col2LgClass" resname="col2LgClass">
+				<source>Column 2 LG Class</source>
+			</trans-unit>
+			<trans-unit id="col2XlClass" resname="col2XlClass">
+				<source>Column 2 XL Class</source>
+			</trans-unit>
+			<trans-unit id="col2XxlClass" resname="col2XlClass">
+				<source>Column 2 XXL Class</source>
+			</trans-unit>
+			<trans-unit id="col2CustomClass" resname="col2CustomClass">
+				<source>Column 2 Custom Class</source>
+			</trans-unit>
+
+			<trans-unit id="col3Class" resname="col3Class">
+				<source>Column 3 Class</source>
+			</trans-unit>
+			<trans-unit id="col3SmClass" resname="col3SmClass">
+				<source>Column 3 SM Class</source>
+			</trans-unit>
+			<trans-unit id="col3MdClass" resname="col3MdClass">
+				<source>Column 3 MD Class</source>
+			</trans-unit>
+			<trans-unit id="col3LgClass" resname="col3LgClass">
+				<source>Column 3 LG Class</source>
+			</trans-unit>
+			<trans-unit id="col3XlClass" resname="col3XlClass">
+				<source>Column 3 XL Class</source>
+			</trans-unit>
+			<trans-unit id="col3XxlClass" resname="col3XlClass">
+				<source>Column 3 XXL Class</source>
+			</trans-unit>
+			<trans-unit id="col3CustomClass" resname="col3CustomClass">
+				<source>Column 3 Custom Class</source>
+			</trans-unit>
+
+			<trans-unit id="col4Class" resname="col4Class">
+				<source>Column 4 Class</source>
+			</trans-unit>
+			<trans-unit id="col4SmClass" resname="col4SmClass">
+				<source>Column 4 SM Class</source>
+			</trans-unit>
+			<trans-unit id="col4MdClass" resname="col4MdClass">
+				<source>Column 4 MD Class</source>
+			</trans-unit>
+			<trans-unit id="col4LgClass" resname="col4LgClass">
+				<source>Column 4 LG Class</source>
+			</trans-unit>
+			<trans-unit id="col4XlClass" resname="col4XlClass">
+				<source>Column 4 XL Class</source>
+			</trans-unit>
+			<trans-unit id="col4XxlClass" resname="col4XlClass">
+				<source>Column 4 XXL Class</source>
+			</trans-unit>
+			<trans-unit id="col4CustomClass" resname="col4CustomClass">
+				<source>Column 4 Custom Class</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

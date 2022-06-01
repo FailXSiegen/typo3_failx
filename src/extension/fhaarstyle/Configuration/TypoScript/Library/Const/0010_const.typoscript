@@ -1,17 +1,17 @@
 plugin {
-    tx_fxtemplateshhhuerth {
+    tx_fhaarstyle {
         settings {
-            # cat=plugin.tx_fxtemplateshhhuerth/basic/2; type=string; label=Root page id
+            # cat=plugin.tx_fhaarstyle/basic/2; type=string; label=Root page id
             rootPageUid = 2
-            # cat=plugin.tx_fxtemplateshhhuerth/basic/3; type=string; label=Main Navigation Path
+            # cat=plugin.tx_fhaarstyle/basic/3; type=string; label=Main Navigation Path
             mainNavPageUid = 3
-            # cat=plugin.tx_fxtemplateshhhuerth/basic/4; type=string; label=Top Navigation Path
+            # cat=plugin.tx_fhaarstyle/basic/4; type=string; label=Top Navigation Path
             headerNavPageUid =
-            # cat=plugin.tx_fxtemplateshhhuerth/basic/5; type=string; label=Footer Navigation Path
+            # cat=plugin.tx_fhaarstyle/basic/5; type=string; label=Footer Navigation Path
             footerNavPageUid = 5
-            # cat=plugin.tx_fxtemplateshhhuerth/basic/11; type=string; label=CTA Navigation path id
+            # cat=plugin.tx_fhaarstyle/basic/11; type=string; label=CTA Navigation path id
             ctaNavPageUid = 4
-            # cat=plugin.tx_fxtemplateshhhuerth/basic/12; type=string; label=Logo path
+            # cat=plugin.tx_fhaarstyle/basic/12; type=string; label=Logo path
             logoPath = EXT:fhaarstyle/Resources/Public/Images/logo_big_quer_neongruen.png
         }
     }
@@ -26,3 +26,7 @@ page {
         templateRootPath = EXT:fhaarstyle/Resources/Private/Templates/Page/
     }
 }
+styles.content.textmedia.maxW = 1920
+styles.content.textmedia.maxWInText = 1920
+styles.content.textmedia.linkWrap.width = 1920m
+styles.content.textmedia.linkWrap.height = 1280m

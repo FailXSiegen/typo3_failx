@@ -3,7 +3,8 @@
 @import './../../../../Public/Vendor/bootstrap/scss/variables';
 @import './../../../../Public/Vendor/bootstrap/scss/mixins';
 @import './../../../../Public/Vendor/bootstrap/scss/tables';
-
+@import './../../../../Public/Vendor/bootstrap/scss/alert';
+@import './../../../../Public/Vendor/bootstrap/scss/type';
 
 @each $themeColour,
 $i in $themeColours {
@@ -78,6 +79,8 @@ $i in $themeColours {
 
 #head {
     background-color: white;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 }
 
 @include media-breakpoint-down(xl) {
@@ -117,10 +120,6 @@ $i in $themeColours {
 }
 
 @include media-breakpoint-up(xl) {
-    #head {
-        min-height: 165px;
-    }
-
     .dropdown-menu {
         &[data-bs-popper] {
             left: 8px;
@@ -166,18 +165,6 @@ footer {
         }
     }
 }
-
-.bg-white {
-    color: $darkgrey;
-
-    h2,
-    .h2,
-    h3,
-    .h3 {
-        color: $blue;
-    }
-}
-
 
 .table {
     tr>td:first-child {

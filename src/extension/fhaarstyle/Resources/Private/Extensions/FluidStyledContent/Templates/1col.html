@@ -1,0 +1,11 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{col}">
+    <div id="c{data.uid}" class="{f:render(partial:'Divclasses',arguments:{data:data})}">
+        <f:for each="{col}" as="child">
+            <f:format.raw>{child.renderedContent}</f:format.raw>
+        </f:for>
+
+    </div>
+</f:if>
+
+</html>

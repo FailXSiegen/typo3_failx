@@ -2,6 +2,7 @@
 @font-face {
     font-family: 'Lobster Two';
     font-style: normal;
+    font-display: swap;
     font-weight: 400;
     src: url('../Fonts/LobsterTwo/lobster-two-v18-latin-regular.eot');
     /* IE9 Compat Modes */
@@ -22,6 +23,7 @@
 @font-face {
     font-family: 'Lobster Two';
     font-style: italic;
+    font-display: swap;
     font-weight: 400;
     src: url('../Fonts/LobsterTwo/lobster-two-v18-latin-italic.eot');
     /* IE9 Compat Modes */
@@ -42,6 +44,7 @@
 @font-face {
     font-family: 'Lobster Two';
     font-style: normal;
+    font-display: swap;
     font-weight: 700;
     src: url('../Fonts/LobsterTwo/lobster-two-v18-latin-700.eot');
     /* IE9 Compat Modes */
@@ -62,6 +65,7 @@
 @font-face {
     font-family: 'Lobster Two';
     font-style: italic;
+    font-display: swap;
     font-weight: 700;
     src: url('../Fonts/LobsterTwo/lobster-two-v18-latin-700italic.eot');
     /* IE9 Compat Modes */
@@ -76,4 +80,13 @@
         /* Safari, Android, iOS */
         url('../Fonts/LobsterTwo/lobster-two-v18-latin-700italic.svg#LobsterTwo') format('svg');
     /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('../Fonts/FontAwesome/fa-brands-400.woff2') format('woff2'),
+        url('../Fonts/FontAwesome/fa-brands-400.ttf') format('truetype');
 }

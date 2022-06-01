@@ -21,7 +21,7 @@
 						<f:variable name="colClass"
 							value="{f:if(condition: '{colCount} > 4',then:'col-6', else:'col-12')}" />
 						<f:variable name="colSmClass"
-							value="{f:if(condition: '{colCount} > 4',then:'col-sm-4', else:'col-sm-6')}" />
+							value="{f:if(condition: '{colCount} > 4',then:'col-sm-4', else:'col-sm-{12 / colCount}')}" />
 						<f:variable name="colMdClass"
 							value="{f:if(condition: '{colCount} > 4',then:'col-md-4', else:'col-md-{12 / colCount}')}" />
 						<f:variable name="colLgClass"
