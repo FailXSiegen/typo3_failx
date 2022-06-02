@@ -44,7 +44,7 @@ config {
 }
 [end]
 
-[page["uid"] == 2]
+[page && page["uid"] == 2]
 config {
     noPageTitle = 1
 }
