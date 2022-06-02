@@ -2,6 +2,7 @@
 .idea
 .ddev
 .env
+.vscode
 .htaccess
 oldfailx
 nbproject

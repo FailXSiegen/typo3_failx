@@ -1,5 +1,5 @@
 {
-	"name": "typo3/cms-base-distribution",
+	"name": "failx/typo3",
 	"description": "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
 	"config": {
@@ -47,14 +47,6 @@
 		"typo3/cms-t3editor": "^11.5.0",
 		"typo3/cms-tstemplate": "^11.5.0",
 		"typo3/cms-viewpage": "^11.5.0"
-	},
-	"scripts": {
-		"typo3-cms-scripts": [
-			"typo3cms install:fixfolderstructure"
-		],
-		"post-autoload-dump": [
-			"@typo3-cms-scripts"
-		]
 	},
 	"repositories": [
 		{

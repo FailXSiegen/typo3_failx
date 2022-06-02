@@ -3,6 +3,11 @@ baseVariants:
   -
     base: 'https://fhaarstyle.ddev.site'
     condition: 'getenv("TYPO3_CONTEXT") == "Development"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=16'
 languages:
   -
     title: Deutsch
@@ -18,4 +23,10 @@ languages:
     flag: de
     websiteTitle: ''
 rootPageId: 2
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      /: 0
+      sitemap.xml: 1533906435
 websiteTitle: 'fHaarstyle ● Mobile Friseurmeisterin ● Lüdenscheid'
